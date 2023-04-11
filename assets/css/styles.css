@@ -309,8 +309,41 @@ img {
   color: var(--first-color);
   margin-right: var(--mb-4);
 }
-/* ===== SKILLS =====*/
 
+.about__information-subtitle {
+  display: block;
+  font-weight: var(--font-semi-bold);
+}
+
+.about__information-subtitle-small {
+  font-size: var(--small-font-size);
+}
+/* ===== SKILLS =====*/
+.skills__container {
+  row-gap: 2rem;
+}
+.skills_subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-dark);
+  margin-bottom: 4rem;
+  /* border: 1px solid red; */
+}
+.skills__data {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 0 var(--mb-2);
+  margin-bottom: var(--mb-4);
+}
+.skills__name {
+  text-transform: uppercase;
+}
+.skills__bar {
+  position: absolute;
+  bottom: -0.75rem;
+  height: 0.25rem;
+  background-color: var(--first-color);
+}
 /* ===== EDUCATION =====*/
 
 /* ===== SERVICES =====*/
