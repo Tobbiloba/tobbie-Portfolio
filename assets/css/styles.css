@@ -398,11 +398,118 @@ img {
   transform: translate(5px, -4px);
 }
 /* ===== SERVICES =====*/
+.services__container {
+  row-gap: 2rem;
+}
 
+.services__content {
+  padding: 1.5rem 0.5rem;
+  border: 2px solid var(--first-color);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.services__icon {
+  font-size: 2rem;
+  padding: 0.5rem;
+  background-color: var(--first-color);
+  color: var(--first-color-lighten);
+  border-radius: 50%;
+  margin-bottom: var(--mb-2);
+}
+
+.services__title {
+  font-size: 1.25rem;
+  color: var(--first-color-dark);
+  margin-bottom: var(--mb-1);
+}
+
+.services__content .services__icon .services__description .services__title {
+  transition: 0.5s;
+}
+
+.services__content:hover {
+  background-color: var(--first-color);
+}
+.services__content:hover .services__icon {
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+}
+
+.services__content:hover .services__title {
+  color: var(--first-color-lighten);
+}
+
+.services__content:hover .services__description {
+  color: var(--first-color-lighten);
+}
 /* ===== PROJECT IN MIND  =====*/
+.project {
+  background-color: var(--first-color);
+  padding-bottom: 0;
+}
 
+.project__container {
+  row-gap: 2rem;
+}
+
+.project__data {
+  text-align: center;
+}
+
+.project__title,
+.project__description {
+  color: var(--first-color-lighten);
+}
+
+.project__description {
+  margin-bottom: var(--mb-4);
+}
+
+.project__img {
+  width: 220px;
+  justify-self: center;
+}
 /* ===== WORKS =====*/
+.works__container {
+  justify-items: center;
+  row-gap: 2rem;
+}
 
+.works__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.works__data {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(204, 75, 44, 0.7);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+.works__link {
+  display: inline-flex;
+  font-size: 1.5rem;
+  background-color: var(--first-color-lighten);
+  color: var(--first-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-bottom: var(--mb-2);
+}
+
+.works__title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color-lighten);
+}
+.works__img:hover .works__data {
+  bottom: 0;
+}
 /* ===== CONTACT =====*/
 
 /* ===== FOOTER =====*/
