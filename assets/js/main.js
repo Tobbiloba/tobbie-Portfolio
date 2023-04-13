@@ -33,9 +33,12 @@ function scrollActive() {
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50,
             sectionId = current.getAttribute('id')
+        borderText = document.getElementById('border-text')
 
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            // console.log(sectionId)
+            borderText.textContent = sectionId;
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
         } else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')

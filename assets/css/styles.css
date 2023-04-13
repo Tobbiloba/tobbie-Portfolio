@@ -95,6 +95,7 @@ img {
 
 .section {
   padding: 4rem 0 2rem;
+  border: 1px solid red;
 }
 .section-title {
   font-size: var(--h1-font-size);
@@ -139,6 +140,7 @@ img {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  /* border: 2px solid black; */
 }
 
 .nav__menu {
@@ -153,7 +155,7 @@ img {
   background-color: var(--first-color);
   transition: 0.5s;
   background-color: #ffffff;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-top-right-radius: 1.5rem;
   opacity: 0.9;
 }
@@ -200,6 +202,7 @@ img {
 .home__container {
   height: calc(100vh - var(--header-height));
   align-items: center;
+  border: 1px solid red;
 }
 .home__data {
   display: flex;
@@ -207,6 +210,7 @@ img {
   align-items: center;
   height: max-content;
   text-align: center;
+  border: 1px solid red;
 }
 .home__img {
   /* padding-top: 1.3rem;
@@ -217,6 +221,7 @@ img {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: var(--mb-2);
+  border: 1px solid red;
 }
 
 .home__img img {
@@ -230,6 +235,7 @@ img {
   font-size: var(--h1-font-size);
   color: var(--first-color);
   font-weight: var(--font-semi-bold);
+  border: 1px solid red;
 }
 
 .home__profession {
@@ -603,6 +609,7 @@ img {
 
   .nav__menu {
     width: var(--nav-width);
+    border: 1px solid rgb(20, 6, 6);
   }
 
   .about__container,
@@ -687,9 +694,10 @@ img {
   }
   .nav__menu {
     left: 0;
-    width: 450px;
+    /* width: 450px; */
     border-top-right-radius: 0rem;
     border: none;
+    /* border: 1px solid black; */
   }
 
   .home__container {
@@ -708,7 +716,33 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
   .border-line {
-    background-color: black;
-    position: relative;
+    background-color: rgb(68, 67, 67);
+    position: absolute;
+    display: flex;
+    left: 300px;
+    height: 100vh;
+    width: 20px;
+    /* overflow: hidden; */
+    /* right: 0; */
+    /* justify-self: flex-start; */
+    z-index: 2;
+    top: 0px;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    /* rotate: 90deg; */
+  }
+  .border-line__text {
+    color: rgb(31, 29, 29);
+    rotate: 90deg;
+    /* border: 1px solid blue; */
+    background: white;
+    height: fit-content;
+    /* width: 100px; */
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    padding: 0rem 4rem;
+    align-items: center;
   }
 }
