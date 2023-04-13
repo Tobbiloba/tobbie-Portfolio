@@ -45,3 +45,19 @@ function scrollActive() {
         }
     })
 }
+
+function printString(str) {
+    let i = 0;
+    const interval = setInterval(() => {
+        if (i < str.length) {
+            const char = str.charAt(i);
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML += char;
+            i++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 200);
+}
+
+printString("Hello! I'm Oluwatobiloba ✌");
