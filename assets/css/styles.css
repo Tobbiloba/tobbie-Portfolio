@@ -843,6 +843,12 @@ img {
     overflow: hidden;
     flex-direction: row;
   }
+  .skills__subtitle {
+    margin-bottom: 1rem;
+  }
+  .skills__data {
+    margin-bottom: 0.7rem;
+  }
   .left__homepage {
     /* border: 1px solid red; */
     background: #bbbaba;
