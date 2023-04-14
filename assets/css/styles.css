@@ -686,6 +686,9 @@ img {
   left: 0px;
   z-index: 2;
 }
+.aboutMe {
+  display: none;
+}
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px) {
   .home__button {
@@ -799,6 +802,9 @@ img {
     left: 0px;
     z-index: 2;
   }
+  .aboutMe {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -808,6 +814,9 @@ img {
   }
   .l-header {
     width: 0;
+  }
+  .about {
+    display: none;
   }
 
   .nav__toggle,
@@ -1000,5 +1009,87 @@ img {
     align-items: center;
     font-weight: 700;
     font-size: 1.25rem;
+  }
+  .aboutMe {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 0.8rem;
+    padding-top: 3rem;
+    /* row-gap: 0.4rem; */
+  }
+  .aboutMe-description {
+    /* border: 1px solid red; */
+    width: 30vw;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMe-description img {
+    margin-bottom: 3em;
+  }
+  .aboutMe-description p {
+    width: 25vw;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .aboutme-details {
+    width: 30vw;
+    margin-right: 3rem;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutme-details div {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem 0px;
+    overflow: hidden;
+  }
+  .aboutme-details p {
+    width: fit-content;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 0.4rem;
+    /* border: 1px solid blue; */
+  }
+  .more-aboutme {
+    margin-top: 20rem;
+  }
+  .more-aboutme h1 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+  .more-aboutme p {
+    font-size: 18;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .more-aboutme p span {
+    font-size: 12px;
+    margin-left: 0.5rem;
+  }
+  .about_information {
+    margin: 3rem 0;
+  }
+  .about_information h1 {
+    font-size: 22px;
+  }
+  .about_information ul {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* row-gap: 1rem; */
+
+    width: fit-content;
+    margin-bottom: 0.5rem;
+  }
+  .about_information ul li {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid rgb(85, 112, 163);
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
   }
 }
