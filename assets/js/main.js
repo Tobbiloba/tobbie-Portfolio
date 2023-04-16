@@ -1,3 +1,5 @@
+// const { title } = require("process")
+
 /*===== MENU SHOW Y HIDDEN =====*/
 const navMenu = document.getElementById('nav-menu'),
     toggleMenu = document.getElementById('nav-toggle'),
@@ -61,3 +63,60 @@ function printString(str) {
 }
 
 printString("Hello! I'm Oluwatobiloba ✌");
+
+
+
+function sendEmail(title, email, message) {
+
+    function sendMail(title, email, message) {
+        const options = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': '17802d2f93mshb3a0c25585f3219p1d255cjsn6d073cd2df31',
+                'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
+            },
+            body: `{"personalizations":[{"to":[{"email":"tobiloba.a.salau@gmail.com"}],"subject":"${title}"}],"from":{"email":"${email}"},"content":[{"type":"text/plain","value":"${message}"}]}"`
+        };
+
+        fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', options)
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+
+    }
+    // let tit = JSON.stringify(title)
+    // console.log(title, email, message);
+    // console.log(typeof (title))
+    // Call sendMail with the provided parameters
+    sendMail(title, email, message);
+}
+
+function sendEmailToApi(event) {
+    event.preventDefault();
+
+    const title = document.getElementById('title').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('body').value.trim();
+
+    if (!title || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    sendEmail(title, email, message);
+    document.getElementById('title').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('body').value = '';
+}
+
+
+function isValidEmail(email) {
+    const emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+}

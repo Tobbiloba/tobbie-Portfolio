@@ -95,7 +95,7 @@ img {
 
 .section {
   padding: 4rem 0 2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .section-title {
   font-size: var(--h1-font-size);
@@ -202,7 +202,7 @@ img {
 .home__container {
   height: calc(100vh - var(--header-height));
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .home__data {
   display: flex;
@@ -210,7 +210,7 @@ img {
   align-items: center;
   height: max-content;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .home__img {
   /* padding-top: 1.3rem;
@@ -521,7 +521,12 @@ img {
   background-color: var(--first-color-lighten);
   color: var(--first-color);
 }
-
+.github__link {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  margin-top: 2rem;
+}
 .services__content:hover .services__title {
   color: var(--first-color-lighten);
 }
@@ -576,9 +581,13 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(204, 75, 44, 0.7);
+  background: rgba(44, 140, 204, 0.7);
   border-radius: 0.5rem;
   transition: 0.3s;
+}
+.works__data-links {
+  display: flex;
+  flex-direction: row;
 }
 .works__link {
   display: inline-flex;
@@ -588,6 +597,7 @@ img {
   padding: 0.25rem;
   border-radius: 0.25rem;
   margin-bottom: var(--mb-2);
+  margin-right: 0.3rem;
 }
 
 .works__title {
@@ -769,8 +779,9 @@ img {
     text-align: initial;
   }
   .project__img {
-    width: 230px;
+    width: 330px;
     align-self: flex-end;
+    /* border: 1px solid red; */
   }
 
   .contact__inputs {
@@ -878,6 +889,10 @@ img {
     background: #e5e7d6;
     width: 41vw;
     padding-top: 0;
+    height: auto;
+    margin: 0;
+    /* position: relative; */
+    /* bottom: 1rem; */
     /* margin-left: 0.82rem; */
     overflow: hidden;
     /* rotate: 10deg; */
@@ -929,7 +944,7 @@ img {
     border-radius: 2rem;
   }
   .about__img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 400px;
   }
   .about__container {
@@ -1097,5 +1112,14 @@ img {
     width: fit-content;
     margin-bottom: 0.5rem;
     border-radius: 0.3rem;
+  }
+  .github__link {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    margin-top: 2rem;
+  }
+  .contact__container {
+    padding-top: 2rem;
   }
 }
